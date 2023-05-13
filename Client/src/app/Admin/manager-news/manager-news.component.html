@@ -1,0 +1,46 @@
+<div class="information">
+    <h2>Product List</h2>
+
+    <ul class="tool">
+
+
+        <li>All</li>
+
+
+    </ul>
+    <div class="information ">
+
+
+        <table class="">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Title</th>
+                    <th>Publication date</th>
+                    <th>author</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="news">
+                <tr *ngFor="let newss of news | paginate: { itemsPerPage: 8, currentPage: currentPage }">
+                    <td>{{ newss.id }}</td>
+                    <td routerLink="UserDetail/{{newss.id}}"><span>
+                            <p>{{ newss.title }}</p>
+                        </span></td>
+                    <td routerLink="UserDetail/{{newss.id}}"><span>
+                            <p>{{ newss.publishedDate }}</p>
+                        </span></td>
+                    <td><span>{{ newss.author }}</span></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="pagination">
+            <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+        </div>
+    </div>
+
+
+
+
+</div>
+

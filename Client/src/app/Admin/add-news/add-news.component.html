@@ -1,0 +1,58 @@
+<div class="add">
+    <!-- <h2>from add product</h2> -->
+    <form class="form flex" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="information  right formadd">
+            <div>
+                <p>General information</p>
+            </div>
+            <div>
+                <label for="">Tile news</label><br>
+                <input type="text" >
+            </div>
+            <div class="ckeditor"> <ckeditor [editor]="Editor" data="<p>Hello, world!</p>" id="content" formControlName="content"></ckeditor></div>
+
+            <div class="flex extra">
+                <div>
+                    <label for="">author</label><br>
+                    <input type="text" id="author" formControlName="author">
+                </div>
+                <!-- <div class="">
+                    <label for="">Quantity</label><br>
+                    <input type="text">
+                </div> -->
+                
+            </div>
+           
+            <button class="bt_add" type="submit">Add News</button>
+        </div>
+        <!-- <div class=" left ">
+            
+            <div class="information formadd">
+                <div class="flex extra">
+                    <p>Brand</p><img src="/Client/src/assets/img/addfile.svg" alt="">
+                </div>
+                <select name="my-select" id="my-select" class="add_extra">
+                    <option value="option1">Option 1</option>
+                    <option value="option2" selected>Option 2</option>
+                    <option value="option3">Option 3</option>
+                  </select>
+            </div>
+            <div class="information formadd" >
+                <div class="flex extra">
+                    <p>Categories</p><img src="/Client/src/assets/img/addfile.svg" alt="">
+                </div>
+                <select name="my-select" id="my-select" class="add_extra">
+                    <option value="option1">Option 1</option>
+                    <option value="option2" selected>Option 2</option>
+                    <option value="option3">Option 3</option>
+                  </select>
+            </div>
+            <div class="information formadd">
+                <div class="flex extra">
+                    <p>Image</p><img src="/Client/src/assets/img/addfile.svg" alt="">
+                </div>
+                
+            </div>
+        </div> -->
+    </form>
+</div>
